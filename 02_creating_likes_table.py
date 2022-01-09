@@ -9,7 +9,7 @@ L = instaloader.Instaloader()
 USER = "anis2423j"
 
 ### Target profile
-PROFILE = 'adighodsi_creation'
+PROFILE = 'adighodsi'
 # PROFILE = 'tohidi.hossein'
 
 ### instaloader starts

@@ -4,7 +4,7 @@ import sqlite3
 # import time
 
 ### Target profile
-PROFILE = 'adighodsi_creation'
+PROFILE = 'adighodsi'
 
 ### databais starts
 try:
@@ -41,13 +41,15 @@ print("list of individual likets is crested!!!")
 like_numbler_list = []
 for person_one in list_one:
     like_numbler = 0
+    
     for person_all in list_all:
         if person_one == person_all:
             like_numbler = like_numbler + 1
     print("> {} liked {} times.".format(person_one, like_numbler))
 
     #makeing a list of like counts
-    like_numbler_list = like_numbler_list + list(str(like_numbler))
+    like_numbler_str = str(like_numbler)
+    like_numbler_list = like_numbler_list + [like_numbler_str]
 # print(like_numbler_list)
 
 ### add list_one and counts to a new table
@@ -72,8 +74,8 @@ for i in range(1, len(list_one)):
     data = (list_one[i],like_numbler_list[i])   
     # print("{}, {}".format(query, data))         
     cursor.execute(query, data)           
-    conn.commit()
-
+    
+conn.commit()
 # finishing up
 print("likers username and number of their likes was added to databais!!")
 conn.close()
