@@ -2,6 +2,12 @@
 	"folders": [
 		{
 			"path": "."
+		},
+		{
+			"path": "..\\..\\..\\Adeleh"
+		},
+		{
+			"path": "..\\My_Django_Project\\devsearch"
 		}
 	],
 	"settings": {}

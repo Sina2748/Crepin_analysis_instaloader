@@ -4,7 +4,7 @@ import sqlite3
 # import time
 
 ### Target profile
-PROFILE = 'adighodsi'
+PROFILE = 'adighodsi_creation'
 
 ### databais starts
 try:
@@ -34,7 +34,7 @@ print("list of all likers is creeated!!!")
 
 ### dellete duplicates of the list, list_one
 list_one = list(set(list_all))
-print("list of individual likets is crested!!!")
+print("list of individual likets is created!!!")
 # print(list_one)
 
 ### make a loop to count list_on items in list_all
@@ -56,7 +56,8 @@ for person_one in list_one:
 try: 
     cursor.execute('''CREATE TABLE Cumulative_likers_table
                 (liker_username text,
-                number_of_likes int
+                number_of_likes int,
+                is_crawled text
                 )''')
     print("Table of post Cumulative_likers_table is created!")
 except:
@@ -67,11 +68,12 @@ except:
 for i in range(1, len(list_one)):
     query = '''INSERT INTO Cumulative_likers_table(
                 liker_username,
-                number_of_likes
+                number_of_likes,
+                is_crawled
                 ) VALUES 
-                (?, ?)'''
+                (?, ?,?)'''
             
-    data = (list_one[i],like_numbler_list[i])   
+    data = (list_one[i],like_numbler_list[i],"no")   
     # print("{}, {}".format(query, data))         
     cursor.execute(query, data)           
     

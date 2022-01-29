@@ -10,7 +10,7 @@ L = instaloader.Instaloader()
 USER = "anis2423j"
 
 ### Target profile
-PROFILE = 'adighodsi'
+PROFILE = 'sina_samii'
 # PROFILE = 'tohidi.hossein'
 
 ### databais starts

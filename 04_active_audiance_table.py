@@ -7,10 +7,10 @@ import pickle
 L = instaloader.Instaloader()
 
 ### Our bot 
-USER = "anis2423j"
+USER = "anis2423f"
 
 ### Target profile
-PROFILE = 'adighodsi_creation'
+PROFILE = 'adighodsi'
 # PROFILE = 'tohidi.hossein'
 
 ### instaloader starts
@@ -30,7 +30,7 @@ except:
 
 
 ### create a list of likers who like more than threshhold
-threshhold = 1
+threshhold = 10
 
 # create table of active audiance 
 try:       
@@ -86,7 +86,7 @@ for row in rows:
                 i = i + 1
                 print(">>> {} of {}. {} was added!".format(i, followee_number, followee.username))
                 followees_list = followees_list + [followee.username]
-                time.sleep(0.3)
+                time.sleep(0.9)
 
         #adding info to table
         query = '''INSERT INTO active_audiance_threshhold_{}(
